@@ -1,0 +1,2 @@
+# k_social_soccer
+Linkear the community of neighborhood leagues, players, technical directors, referees and the public that attends and does not attend, using a process of registration and handling of signings for team contracts, which was born in the era of knowledge and collaborative economies, using a new team based on modern technologies, always in constant improvement of its services, products and collaborative team, maintaining a Digital Kolaborative Ecosystem in constant evolution and exponential growth
