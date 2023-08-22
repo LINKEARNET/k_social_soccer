@@ -1,9 +1,27 @@
 const mysql = require('mysql');
 const { promisify }= require('util');
+const dotenv = require('dotenv');
 
-const { database } = require('../keys');
+// const { database } = require('../keys')
 
-const pool = mysql.createPool(database);
+
+dotenv.config();
+
+const {     
+  MYSQLHOST,
+  MYSQLUSER,
+  MYSQLPASSWORD,
+  MYSQLDATABASE,
+  MYSQLPORT,
+  MYSQL_URI } = require('../keys');
+
+const pool = mysql.createPool(    
+  MYSQLHOST,
+  MYSQLUSER,
+  MYSQLPASSWORD,
+  MYSQLDATABASE,
+  MYSQLPORT,
+  MYSQL_URI);
 
 pool.getConnection((err, connection) => {
   if (err) {
