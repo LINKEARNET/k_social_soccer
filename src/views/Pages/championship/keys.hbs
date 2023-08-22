@@ -5,31 +5,131 @@
   @import
   url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
 </style>
-   <div class="col-md-12" style="margin-bottom: 5px; ">
-        <div class="card text-center border border-primary">
-            <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
-                Cuadrangular de los equipo
-            </h3>
+  <div id="container">
+    <div class="col-md-12" style="margin-bottom: 5px; ">
+          <div>
+            <br>
+              <h3 class="card-title text-uppercase" style="color: rgb(0, 0, 0);">
+                  Cuadrangular de equipos
+              </h3>
+          </div>
+      </div>
+      <div class="container_general">
+        <div id="inputBox">
+            <h6>Cuartos de Final</h6>
+            <div id="input_">
+              <div id="two">
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo">Primer clasificado</option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo XD">Segundo clasificado </option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+              </div>
+              <div id="two">
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo">Tercer clasificado</option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo XD">Cuarto clasificado </option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+              </div>
+              <div id="two">
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo">Quinto clasificado</option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo XD">Sexto clasificado </option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+              </div>   
+              <div id="two">
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo">Séptimo clasificado</option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo XD">Octavo clasificado </option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+              </div>                                 
+            </div>
         </div>
-    </div>
-  <div id="input"></div>
-    <div id="inputBox">
-        <option value="selecionar equipo XD">Selecciona el primer equipo clasificado</option>
-        <select id="country" name="country" class="btn btn-secondary col-12" required>
-        <option value="selecionar equipo XD">Primer equipo clasificado</option>
-        {{#each teams}}
-                <option value="{{name}}">{{name}}</option>
-        {{/each}}        
-        </select>
-        <option value="selecionar equipo XD">Selecciona el segundo equipo clasificado</option>
-        <select id="country" name="country" class="btn btn-secondary col-12" required>
-         <option value="selecionar equipo XD">Segundo equipo clasificado </option>
-        {{#each teams}}
-                <option value="{{name}}">{{name}}</option>
-        {{/each}}        
-        </select>
-    </div>
+        <div id="inputBox">
+            <h6>Semifinal</h6>
+            <div id="input">
+              <div id="two">
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo">Primer Semifinalista</option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo XD">Segundo Semifinalista </option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+              </div>
+              <div id="two">
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo">Tercer Semifinalista</option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo XD">Cuarto Semifinalista </option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+              </div>                                    
+            </div>
+        </div>
+        <div id="inputBox">
+            <h6>Final</h6>
+            <div id="inpu">
+              <div id="one">
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo">Primer Finalista</option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+                <select id="classificated" name="classificated" class="col-12" required>
+                <option value="selecionar equipo XD">Segundo Finalista </option>
+                {{#each teams}}
+                        <option value="{{name}}">{{name}}</option>
+                {{/each}}        
+                </select>
+              </div>                                  
+            </div>
+        </div>      
+      </div>
   </div>
   {{else}}
-    <h1>logueate papu XD</h1>
+    <h1>Inicia Sesión</h1>
     {{/if}}
