@@ -34,7 +34,7 @@ io.on('connection', (socket) => {
     })
 })
 //settings
-app.set('port', process.env.PORT || 3400);
+app.set('port', process.env.PORT || 5000);
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs({
@@ -78,7 +78,7 @@ const options = {
 };
 
 app.use(session({
-    key: 'session_cookie_name',
+    //key: 'social_soccer_public',
     secret: 'session_cookie_secret',    
     resave: false,
     saveUninitialized: false,

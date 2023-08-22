@@ -15,13 +15,13 @@ const {
   MYSQLPORT,
   MYSQL_URI } = require('../keys');
 
-const pool = mysql.createPool(    
-  MYSQLHOST,
-  MYSQLUSER,
-  MYSQLPASSWORD,
-  MYSQLDATABASE,
-  MYSQLPORT,
-  MYSQL_URI);
+const pool = mysql.createPool( {   
+  user: MYSQLUSER,
+    password: MYSQLPASSWORD,
+    host: MYSQLHOST,
+    port: MYSQLPORT,
+    database: MYSQLDATABASE,
+    uri: MYSQL_URI})
 
 pool.getConnection((err, connection) => {
   if (err) {
