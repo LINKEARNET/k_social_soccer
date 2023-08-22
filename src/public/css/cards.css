@@ -1,0 +1,47 @@
+h3 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  border-radius: 25px;
+  border: none;
+
+}
+
+.card-body {
+  width: 25%;
+  margin: 20px;
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 3px 10px rgb(255, 0, 0);
+  font-size: 20px;
+  float: left;
+  border-radius: 15px;
+}
+
+.danger {
+  color: black;
+  background-color: rgb(219, 42, 42);
+  font-size: 20px;
+  line-height: 15px;
+  width: 87px;
+  height: 70px;
+}
+
+.secondary {
+  color: black;
+  background-color: rgb(56, 218, 97);
+  font-size: 20px;
+  line-height: 50px;
+  width: 87px;
+  height: 70px;
+}
+
+.color{
+  text-align: center;
+  color: black;
+}

@@ -1,0 +1,56 @@
+<div class="col-md-12" style="margin-bottom: 5px; ">
+    <div class="card text-center border border-primary">
+        <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
+            Editar jugador
+        </h3>
+    </div>
+</div>
+<link rel="stylesheet" href="/css/players.css">
+<div class="card-body">
+    <form action="/players/edit-players/{{player.id}}" method="POST">
+        <div id="logo"></div>
+        <div id="title">Crear</div>
+        <div id="sub-title">Editar Jugador</div>
+        <div id="input">
+            <div id="inputBox">
+                <label>Nombre del Jugador</label>
+                <input type="text" value="{{player.name}}" name="name" class="form-control"
+                    placeholder="Nombre del jugador" />
+            </div>
+            <div id="inputBox">
+                <label>Apellido del Jugador</label>
+                <input type="text" value="{{player.lastname}}" name="lastname" class="form-control"
+                    placeholder="Apellido del Jugador" />
+            </div>
+
+            <div id="inputBox">
+                <label>Edad del jugador</label>
+                <input type="text" value="{{player.age}}" class="age" name="category"
+                    placeholder="Edad del jugador" autofocus />
+            </div>
+            <div id="inputBox">
+                <label>Cedula del jugador</label>
+                <input type="text" value="{{player.cedula}}" name="cedula" class="form-control"
+                    placeholder="Cedula del jugador" />
+            </div>
+            <div id="inputBox">
+                <label>Posición del Jugador</label>
+                <input type="text" value="{{player.typePlayer}}" name="typePlayer" class="form-control"
+                    placeholder="Posición del Jugador" />
+            </div>
+            <div id="inputBox">
+                <label>Goles Marcados</label>
+                <input type="text" value="{{player.goalsMarked}}" name="goalsMarked" class="form-control"
+                    placeholder="Goles Marcados" />
+            </div>
+            
+                       
+            <div id="inputBox">
+                <input type="submit" value="Guardar" />
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>

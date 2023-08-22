@@ -1,0 +1,51 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+</style>
+
+<link rel="stylesheet" href="/css/players.css">
+<form action="/players/players" method="POST">
+  <div id="logo"></div>
+  <div id="title">Agregar</div>
+  <div id="sub-title">Jugador</div>
+  <div id="input">
+    <div id="inputBox">
+      <label>Nombre del Jugador</label>
+      <input type="text" name="name" class="form-control" placeholder="Nombre del Jugador" autofocus />
+    </div>
+    <div id="inputBox">
+      <label>Apellido del jugador</label>
+      <input type="text" name="lastname" class="form-control" placeholder="Apellido del jugador" />
+    </div>
+    <div id="inputBox">
+      <label>Edad del jugador</label>
+      <input type="text" name="age" class="form-control" placeholder="Edad del jugador" />
+    </div>
+     <div id="inputBox">
+      <label>Cedula del jugador</label>
+      <input type="text" name="text" class="form-control" placeholder="Cedula del jugador" />
+    </div>
+
+    <div id="inputBox">
+      <label>Posición del Jugador</label>
+      <input type="text" class="form-control" name="typePlayer" placeholder="Posición del Jugador" />
+    </div>
+
+      <option value="selecionar equipo XD">Selecciona el segundo equipo clasificado</option>
+        <select id="country" name="country" class="btn btn-secondary col-12" required>
+         <option value="selecionar equipo XD">Segundo equipo clasificado </option>
+        {{#each teams}}
+                <option value="{{name}}">{{name}}</option>
+        {{/each}}        
+        </select>
+
+
+    <div id="inputBox">
+      <label>Goles Marcados</label>
+      <input type="text" name="goalsMarked" class="form-control" placeholder="Goles del jugador" />
+    </div>
+
+    <div id="inputBox">
+      <input type="submit" value="Guardar" />
+    </div>
+  </div>
+</form>

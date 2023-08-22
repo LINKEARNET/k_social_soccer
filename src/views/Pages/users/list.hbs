@@ -1,0 +1,110 @@
+{{#if user}}
+<div class="container p-4">
+    <div class="col-md-12" style="margin-bottom: 5px; ">
+        <div class="card text-center border border-primary">
+            <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
+                Usuarios
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        {{#each users}}
+        <div class="col-md-3 ">
+            <div class="card border border-primary">
+                <div class="card-body">
+                    {{#if profile_image}}
+                    <img class="card__image" src="/{{profile_image}}" loading="lazy" alt="User Profile">
+                    {{else}}
+                    <img src="/not-found/not-found-image.png" class="card__image" alt="..." alt="User Profile">
+                    {{/if}}
+                    <p class="card-title text-uppercase text-center m-1" style="color: rgb(44, 142, 253); ">
+                        {{name}}
+                    </p>
+
+                    <p class="m-2">
+                        Email: {{email}}
+                    </p>
+                    <p class="m-2">
+                        Descripción: {{description}}
+                    </p>
+                    <p class="m-2 text-center">
+                        {{timeago createnUsers}}
+                    </p>
+                    <a class="btn btn-danger" href="/users/delete-users/{{id}}">
+                        <i class="fa-solid fa-trash-can"></i>
+                        Delete
+                    </a>
+                    <a class="btn btn-secondary" href="/users/edit-users/{{id}}">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        Edit
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4 mx-auto">
+            <div class="card card-body text-center">
+                <p>There are not Users saved yet.</p>
+                <a href="/links/user">Create One!</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{else}}
+<h1>logueate papu</h1>
+{{/if}}
+
+{{!-- <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip">
+        <div class="mainflip flip-0">
+            <div class="frontside">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <p><img class=" img-fluid" src="/{{profile_image}}" alt="card image"></p>
+                        <h4 class="card-title">Sunlimetech</h4>
+                        <p class="card-text">This is basic card with image on top, title, description and button.</p>
+                        <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i
+                                class="fa fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="backside">
+                <div class="card">
+                    <div class="card-body text-center mt-4">
+                        <h4 class="card-title">Sunlimetech</h4>
+                        <p class="card-text">This is basic card with image on top, title, description and button.This is
+                            basic card with image on top, title, description and button.This is basic card with image on
+                            top, title, description and button.</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.fiverr.com/share/qb8D02">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.fiverr.com/share/qb8D02">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.fiverr.com/share/qb8D02">
+                                    <i class="fa fa-skype"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.fiverr.com/share/qb8D02">
+                                    <i class="fa fa-google"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}

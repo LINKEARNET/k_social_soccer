@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/cards.css">
+<div class="col-md-12" style="margin-bottom: 5px; ">
+    <div class="card text-center border border-primary">
+        <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
+            Lista de equipos
+        </h3>
+    </div>
+</div>
+<a class="color" href="/teams/add">Añadir equipo </a>
+{{#each teams}}
+<div class="card-body">
+    <p>{{name_president}}</p>
+    <p>{{name}}</p>
+     {{#if photo}}
+    <img class="card__image" src="/{{photo}}" loading="lazy" alt="User Profile">
+    {{else}}
+    <img src="/not-found/not-found-image.png" class="card__image" alt="..." alt="User Profile">
+    {{/if}}
+    <p>{{category}}</p>
+    <p>{{series}}</p>
+    <p>{{initials}}</p>
+    <p>{{description}}</p>
+    <p>{{mail}}</p>
+    <p>{{creation_date}}</p>
+    <p>{{main_color}}</p>
+    <p>{{secondary_color}}</p>
+    <p>{{phone}}</p>
+    <center>
+        <a href="/teams/delete-teams/{{id}}" class="danger">Eliminar</a>
+        <a href="/teams/edit-teams/{{id}}" class="secondary">Editar</a>
+        <form action="/teams/photo-team/{{id}}" method="POST" encType="multipart/form-data">
+            <input type="file" name="sampleFile" accept="image/*" />
+            <input type="submit">
+        </form>
+    </center>
+</div>
+{{else}}
+<center> <p>No hay registro guardados a un </p>
+    <a href="/teams/add"> Agrega uno haciendo click aqui</a>
+</center>
+{{/each}}
+
+

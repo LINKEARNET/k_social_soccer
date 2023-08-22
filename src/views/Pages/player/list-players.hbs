@@ -1,0 +1,39 @@
+<div class="col-md-12" style="margin-bottom: 5px; ">
+    <div class="card text-center border border-primary">
+        <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
+            Lista de jugadores
+        </h3>
+    </div>
+</div>
+{{#if user}}
+<link rel="stylesheet" href="/css/cards.css">
+{{#each players}}
+<div class="card-body">
+    {{#if photo}}
+    <img class="card__image" src="/{{photo}}" loading="lazy" alt="User Profile">
+    {{else}}
+    <img src="/not-found/not-found-image.png" class="card__image" alt="..." alt="User Profile">
+    {{/if}}
+    <p>{{name}}</p>
+    <p>{{lastname}}</p>
+    <p>{{age}}</p>
+    <p>{{cedula}}</p>
+    <p>{{typePlayer}}</p>
+    <p>{{goalsMarked}}</p>
+    <center>
+        <a href="/players/delete-players/{{id}}" class="danger">Eliminar</a>
+        <a href="/players/edit-players/{{id}}" class="secondary">Editar</a>
+        <form action="/players/photo-player/{{id}}" method="POST" encType="multipart/form-data">
+            <input type="file" name="sampleFile" accept="image/*" />
+            <input type="submit">
+        </form>
+    </center>
+</div>
+{{else}}
+<center <p>No hay registro guardados a un </p>
+    <a href="/players/add"> Agrega uno haciendo click aqui</a>
+</center>
+{{/each}}
+{{else}}
+<h1>logueate </h1>
+{{/if}}

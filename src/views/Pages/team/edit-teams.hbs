@@ -1,0 +1,82 @@
+<div class="col-md-12" style="margin-bottom: 5px; ">
+    <div class="card text-center border border-primary">
+        <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
+            Editar al equipo
+        </h3>
+    </div>
+</div>
+<link rel="stylesheet" href="/css/teams.css">
+<div class="card-body">
+    <form action="/teams/edit-teams/{{team.id}}" method="POST">
+        <div id="logo"></div>
+        <div id="title">Crear</div>
+        <div id="sub-title">Equipo a ser agregado</div>
+        <div id="input">
+            <div id="inputBox">
+                <label>Nombre del Presidente</label>
+                <input type="text" value="{{team.name_president}}" name="name_president" class="form-control"
+                    placeholder="Nombre del presidente" />
+            </div>
+            <div id="inputBox">
+                <label>Nombre del equipo</label>
+                <input type="text" value="{{team.name}}" name="name" class="form-control"
+                    placeholder="Nombre del Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Nueva categoria del Equipo</label>
+                <input type="text" value="{{team.category}}" class="form-control" name="category"
+                    placeholder="Nueva categoria del Equipo" autofocus />
+            </div>
+            <div id="inputBox">
+                <label>Nueva serie del Equipo</label>
+                <input type="text" value="{{team.series}}" name="series" class="form-control"
+                    placeholder="Nueva serie del Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Iniciales del Equipo</label>
+                <input type="text" value="{{team.initials}}" name="initials" class="form-control"
+                    placeholder="Iniciales del Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Descripcion del Equipo</label>
+                <input type="text" value="{{team.description}}" name="description" class="form-control"
+                    placeholder="Descripcion del Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Nuevo mail del Equipo</label>
+                <input type="text" value="{{team.mail}}" name="mail" class="form-control"
+                    placeholder="Nuevo mail del Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Fecha de creacion del Equipo</label>
+                <input type="date" value="{{team.creation_date}}" name="creation_date" class="form-control"
+                    placeholder="Fecha de creacion del Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Color pricipal Equipo</label>
+                <input type="text" value="{{team.main_color}}" name="main_color" class="form-control"
+                    placeholder="Color pricipal Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Color secundario Equipo</label>
+                <input type="text" value="{{team.secondary_color}}" name="secondary_color" class="form-control"
+                    placeholder="Color secundario Equipo" />
+            </div>
+            <div id="inputBox">
+                <label>Nuevo celular del Equipo</label>
+                <input type="text" value="{{team.phone}}" name="phone" class="form-control"
+                    placeholder="Nuevo celular del Equip" />
+            </div>
+            <div id="inputBox">
+                <input type="submit" value="Guardar" />
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+
+
+

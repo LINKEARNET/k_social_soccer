@@ -1,0 +1,124 @@
+<style>
+  @import
+  url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+</style>
+    <div class="col-md-12" style="margin-bottom: 5px; ">
+        <div class="card text-center border border-primary">
+            <h3 class="card-title text-uppercase" style="color: rgb(44, 142, 253);">
+                Equipo
+            </h3>
+        </div>
+    </div>
+<link rel="stylesheet" href="/css/teams.css" />
+<form action="/teams/teams" method="POST">
+  <div id="logo"></div>
+  <div id="title">Agregar</div>
+  <div id="sub-title">Equipo a ser agregado</div>
+  <div id="input">
+    <div id="inputBox">
+      <label>Nombre del Presidente</label>
+      <input
+        type="text"
+        name="name_president"
+        class="form-control"
+        placeholder="Nombre del Presidente"
+        autofocus
+      />
+    </div>
+    <div id="inputBox">
+      <label>Nombre del Equipo</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        placeholder="Nombre del Equipo"
+        autofocus
+      />
+    </div>
+    
+    <div id="inputBox">
+      <label>Categoria del Equipo</label>
+      <input
+        type="text"
+        class="form-control"
+        name="category"
+        placeholder="Categoria del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Serie del Equipo</label>
+      <input
+        type="text"
+        name="series"
+        class="form-control"
+        placeholder="Serie del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Iniciales del Equipo</label>
+      <input
+        type="text"
+        name="initials"
+        class="form-control"
+        placeholder="Iniciales del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Descripción del Equipo</label>
+      <input
+        type="text"
+        name="description"
+        class="form-control"
+        placeholder="Descripcion del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Correo del Equipo</label>
+      <input
+        type="text"
+        name="mail"
+        class="form-control"
+        placeholder="Correo del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Fecha de creacion del Equipo</label>
+      <input
+        type="date"
+        name="creation_date"
+        class="form-control"
+        placeholder="Fecha de creacion del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Color del Equipo</label>
+      <input
+        type="text"
+        name="main_color"
+        class="form-control"
+        placeholder="Color del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Color secundario del Equipo</label>
+      <input
+        type="text"
+        name="secondary_color"
+        class="form-control"
+        placeholder="Color del Equipo"
+      />
+    </div>
+    <div id="inputBox">
+      <label>Telefono del Equipo</label>
+      <input
+        type="text"
+        name="phone"
+        class="form-control"
+        placeholder="Telefono del Equipo"
+      />
+    </div>  
+    <div id="inputBox">
+      <input type="submit" value="Guardar" />
+    </div>
+  </div>
+</form>

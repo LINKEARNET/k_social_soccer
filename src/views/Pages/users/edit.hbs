@@ -1,0 +1,37 @@
+{{#if user}}
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+
+            <div class="card border border-primary">
+                <div class="card-body">
+                    <form action="/users/edit-users/{{user.id}}" method="POST">
+                        <h1 style="color: rgb(11, 118, 206);">Editar</h1>
+                        <div class="form-group">
+                            <input type="text" value="{{user.name}}" name="name" class="form-control"
+                                placeholder="Nombre" required autofocus>
+                        </div> <br>
+                        <div class="form-group">
+                            <input type="text" value="{{user.email}}" name="email" class="form-control"
+                                placeholder="Email" required>
+                        </div><br>
+                        <div class="form-group">
+                            <textarea name="description" rows="2" class="form-control" required
+                                placeholder="Description">{{user.description}}</textarea>
+                        </div><br>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn btn-primary btn-block">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{{else}}
+<h1>logueate papu</h1>
+{{/if}}

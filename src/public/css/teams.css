@@ -1,0 +1,84 @@
+body {
+	background-image: url("/images/blue_background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+title {
+	color: #000000;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 24px;
+}
+
+#sub-title {
+	color: #000000;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 7px;
+	letter-spacing: 3px;
+}
+
+form {
+	position: static;
+	background: #adb1b4;
+	width: 1120px;
+	padding: 40px 40px 100px;
+	border-radius: 100px;
+	text-align: center;
+	top: 50%;
+	left: 40%;
+
+}
+
+form h2 {
+	color: #000000;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 100px;
+}
+
+form #input {
+	text-align: left;
+	margin-top: 10px;
+
+}
+
+form #input #inputBox {
+	margin-top: 10px;
+
+}
+
+form #input #inputBox label {
+	display: flex;
+	margin-bottom: 10px;
+	font-size: 18px;
+
+}
+
+form #input #inputBox input {
+	width: 100%;
+	height: 50px;
+	padding: 5px 15px;
+	font-size: 18px;
+	color: #000000;
+	border-radius: 25px;
+	border: none;
+
+}
+
+form #input #inputBox input[type="submit"] {
+	margin-top: 20px;
+
+}
+
+form #input #inputBox input[type="submit"]:active {
+	color: #000000;
+	margin-top: 20px;
+
+}
+
+form #input #inputBox input::placeholder {
+
+	font-size: 18px;
+}
