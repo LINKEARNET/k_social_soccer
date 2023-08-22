@@ -1,9 +1,16 @@
-const Sequelize = require('sequelize')
+const { Sequelize } = require("sequelize");
 const mysql = require('mysql2/promise')
 
 const dbName = process.env.DB_SCHEMAS || "social_soccer_public";
 
-mysql.createConnection({
+const { MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT, MYSQL_URI, } = require("../keys");
+
+const sequelize = new Sequelize(MYSQLDATABASE, MYSQLUSER, MYSQLPASSWORD, {
+	host: MYSQLHOST,
+	port: MYSQLPORT,
+	dialect: 'mysql'
+});
+/* mysql.createConnection({
   host: process.env.DB_HOST || "127.0.0.1",
   port: process.env.DB_PORT || "3306",
   user     : process.env.DB_USER || "root",
@@ -12,7 +19,7 @@ mysql.createConnection({
   connection.query(`CREATE DATABASE IF NOT EXISTS ${dbName};`).then((res) => {
       console.info("Database created or verified successfully");
   })
-})
+}) */
 
 const usersModel = require('../models/user.model');
 const playersModel = require('../models/player.model');
@@ -21,7 +28,7 @@ const leagueRegularsModel = require('../models/leagueRegular.model');
 const qualificationsModel = require('../models/qualification.model');
 
 
-const sequelize = new Sequelize(
+/* const sequelize = new Sequelize(
   'social_soccer_public',
   'root',
   '',
@@ -35,7 +42,7 @@ const sequelize = new Sequelize(
       idle: 10000
     }
   }
-)
+) */
 
 sequelize.authenticate()
   .then(() => {
